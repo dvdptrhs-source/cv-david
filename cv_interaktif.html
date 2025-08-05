@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Interaktif - David Putra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      gap: 15px;
+    }
+    nav button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+    }
+    section {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    section.active {
+      display: block;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>David Putra Simanjuntak</h1>
+    <p>Desainer | Fotografer | Freelancer Digital</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('about')">Tentang Saya</button>
+    <button onclick="showSection('skills')">Keahlian</button>
+    <button onclick="showSection('experience')">Pengalaman</button>
+    <button onclick="showSection('contact')">Kontak</button>
+  </nav>
+
+  <section id="about" class="active">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah seorang pekerja kreatif yang fokus di bidang desain grafis, fotografi, dan jasa digital. Memiliki semangat tinggi dalam mengembangkan portofolio online serta terbiasa bekerja mandiri maupun kolaboratif.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Keahlian</h2>
+    <ul>
+      <li>Desain Grafis (Photoshop, Canva, Figma)</li>
+      <li>Fotografi Produk & Lifestyle</li>
+      <li>Video Editing (CapCut, Premiere)</li>
+      <li>Copywriting dan Content Planning</li>
+      <li>Pembuatan Landing Page</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Pengalaman</h2>
+    <ul>
+      <li>Freelancer Desain di Sribulancer & Fiverr (2023–sekarang)</li>
+      <li>Kontributor Foto di Shutterstock & Adobe Stock</li>
+      <li>Social Media Designer untuk UMKM Lokal</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Kontak</h2>
+    <p>Email: davidputra@email.com</p>
+    <p>Instagram: @david.creative</p>
+    <p>LinkedIn: linkedin.com/in/davidputra</p>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
